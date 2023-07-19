@@ -142,3 +142,65 @@ set2.update([12,3,66,83,11]) #리스트로 추가
 print(set1 & set2) #교집합
 print(set1 | set2) #합집합
 print(set1 - set2) #차집합
+
+##연산자
+print(5 == "5") #False
+print(5 > 3 and 10 > 1)
+print(5 < 3 or 10 > 1)
+print(not 1 > 2)
+print(not False)  #True
+
+##if문
+a = "student"
+if a =="teacher":
+    print("hello")
+    print("----") #중괄호 X
+else: #elif(조건):
+    print("nope")
+    print("!!!!!")
+
+
+#score = input("점수가 몆 점인가요? ")
+#score = int(score)
+#score = int(input("점수가 몆 점인가요? "))
+#input으로 받을때는 무조건 String으로 받아들임 그래서 형변***
+
+# if score >= 60:
+#     print("pass")
+# else:
+#     print("fail")
+
+# #score = int(input("점수는? "))
+# if 90 <= score < 100:  #score >=90 and score < 100
+#     print('A')
+# elif score >=80:
+#     print('B')
+# elif score>=70:
+#     print('C')
+# elif score>=60:
+#     print('D')
+# else:
+#     print('F')
+
+##while문
+a = 10
+while a > 0:
+    print('hello')
+    a -= 1
+
+a = -5
+while a < 0:
+    print('while')
+    a += 1
+
+my_list =['A', 'B', 'C', 'D']
+for letter in my_list:
+    print(letter)
+
+##range
+print(range(5))  #range(0, 5)->0,1,2,3,4
+for i in range(5):
+    print(i)
+
+for i in range(len(my_list)):
+    print(my_list[i])
