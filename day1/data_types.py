@@ -9,4 +9,4 @@ print(quote2.split("P")) #{"Learn ","ython"}
 print(quote2.split("arn")) #{"Le"," Python"}
 
 example ="a:B:C:D"
-print()
+print(example.split(":"))

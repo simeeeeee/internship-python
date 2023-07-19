@@ -4,3 +4,4 @@ print(a)
 
 a = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'black', 'white']
 a.insert(1,"pink")
+

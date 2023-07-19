@@ -39,7 +39,106 @@ print(a)
 #삭제 첫번째로 나오는 값 삭제
 a.remove('33')
 
-#꺼내기 마지막 요소를 꺼내고 리스트에서 해당 요소 삭제
-a.pop()
+#꺼내기 
+a.pop() #마지막 요소를 꺼내고 리스트에서 해당 요소 삭제
 print(a)
 
+a=["A","b","c","D","e"]
+print(a.pop(1))
+print(a)
+#pop은 pop() 하면 마지막 요소
+#      pop(idx)  idx요소의 값을 pop
+
+print(a.count("A"))
+print(sorted(a))
+
+# b ="lalalalaaa"
+# print("count a is: ", b.count("a"))
+
+my_list = [0] * 10 # 원소가 10개가 된 리스트
+my_tuple = (0, 0) * 5 # 튜플은 (0)시, 튜플인지 인식못함! 그래서 (0, ) 콤마 무조건 있어야함
+
+print(type(0)) # class 'int'
+print(my_list)
+print(my_tuple)
+
+my_list = [1,2,3,["a","b","c"]]
+print(my_list[3][2])
+print(len(my_list))  # 4
+print(len(my_list[3]))  # 3
+
+##dictionary => javascript의 object, json과 유사
+my_dictionary = dict() #선언
+print(my_dictionary)
+my_dictionary = {"key" : "value"} #할당
+print(my_dictionary)
+my_dictionary = {"name":"gildong","age":20, "location":"seoul"}
+my_dictionary["favorite_numbers"] = [1,2,3] #추가
+
+my_dictionary["office_location"] = "Dangsan"
+
+#삭제
+del my_dictionary["office_location"]
+
+my_dictionary["favorite_color"] = "green"
+my_dictionary["favorite_foods"] = [{"name":"apple",
+                                    "is_healty":True},
+                                    {"name":"pizza",
+                                     "is_healty":False}] #딕셔너리로된 리스트
+
+print(my_dictionary["favorite_foods"])
+print(my_dictionary)
+
+#print(my_dictionary["office_location"]) ##keyerror
+print(my_dictionary.get("office_location")) # 키값이 존재하지 않아 -> none  에러안나고 none나오게
+#키값이 없다면 뒤에 값을 출력
+print(my_dictionary.get("office_location","없다면 이거"))
+
+print("----------------------")
+print(my_dictionary.keys())
+print(my_dictionary.values())
+print(my_dictionary.items()) # key, value값을 튜플형식으로 (key,value)
+
+print("----------------------")
+for key, value in my_dictionary.items():
+    print("key", key)
+    print("value", value)
+
+
+print("age" in my_dictionary) #in -> True/False(boolean)로 반환 
+                            # key값이 존재 : True/ 없음 : False
+
+if "age" in my_dictionary:
+    pass
+else:
+    my_dictionary["age"] = 50
+
+##Set
+my_list = [1,2,3, "A"]
+my_list.append("B")
+my_list.append("B")
+my_list.append("B")
+print(my_list)
+
+#print(set(my_list)) #리스트를 set로
+
+my_set ={1,2,3,"A"}
+my_set.add(4)
+my_set.add(4)
+my_set.add(4)
+my_set.add(4)
+print(my_set)
+#set은 중복안됨
+
+a = "Hello"
+my_set = set(a)
+print(my_set) #hello 중 중복되는 l은 하나만
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4,5,6,7}
+set2.add(8)
+set2.update([12,3,66,83,11]) #리스트로 추가
+
+print(set1 & set2) #교집합
+print(set1 | set2) #합집합
+print(set1 - set2) #차집합
