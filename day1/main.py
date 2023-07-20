@@ -204,3 +204,42 @@ for i in range(5):
 
 for i in range(len(my_list)):
     print(my_list[i])
+
+##function
+def say_hello():
+    print('hello')
+
+def say_goodbay(name):
+    print("goodbye,", name)
+
+say_hello()
+say_goodbay("Jack")
+
+##abs
+print(abs(3))
+print(abs(-3.5))
+
+##id -> 객체//메모리에 할당한 값
+a = 3
+print(id(a))
+b = 3
+print(a is b)
+
+##sum -> 리스트,튜플,세트의 합
+print(sum([1,2,4]))
+
+##range
+for i in range(0,5,2): #start,stop,step
+    print(i)
+for i in range(5,0,-2):
+    print(i)
+
+##filter() -> 걸러낸다
+def positive(x):
+    return x > 0  
+    #if x>0 
+    #  return True
+    #return False
+a = [ 1, 3, 6, 0, -2 ]
+#print(positive(a)) -> error : int , List 형이 서로 달라
+print(list(filter(positive,a)))
