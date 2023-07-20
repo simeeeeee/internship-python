@@ -26,6 +26,8 @@ def main():
     print(f"timestamp : {timestamp}")
     print(f"USD : {USD}")
 
-    
+
 if __name__ == "__main__":
     main()
+
+
