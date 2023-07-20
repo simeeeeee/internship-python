@@ -243,3 +243,58 @@ def positive(x):
 a = [ 1, 3, 6, 0, -2 ]
 #print(positive(a)) -> error : int , List 형이 서로 달라
 print(list(filter(positive,a)))
+
+colors = ['red', 'blue','brown', 'white']
+names = ['Lukas','Mike','Yoon','Lee']
+
+##enumerate -> index와 value를 같이 받아옴
+## f"" 따옴표앞에 f를 붙일 시, 내부의 {}인식하여 변수로 인식
+for i,name in enumerate(names):
+    print(name, f"likes color {colors[i]}")
+
+a = "3.5"
+print(float(a))
+
+a = 3.5
+print(str(a) == "3.5")  #True
+
+##len()
+print(len("python"))
+print(len([1,3,5,[2,4]]))
+print(len((1,'a')))
+
+##type()
+print(type(3.5))
+print(type(str(3.5)))
+print(type(int(3.5)))
+
+
+##외장함수
+import os
+print(os.getcwd())  #get current working directory
+
+import time
+#from time import time
+print(time.time())  #unix timestamp
+
+def million_operations_function():
+    start = time.time()
+    my_list = []
+    
+    for i in range(1000000):
+        my_list.append(0)
+    
+    end = time.time()
+    print(end - start)
+
+million_operations_function()  #시간을 재는 함수
+
+import datetime
+now = datetime.datetime.now()
+print(now.month)
+print(now.day)
+print(now.minute)
+
+import random
+print(random.randint(0,10))  #randint는 10도 포함
+print(random.randrange(0,10))  #randrange는 10 포함안함
