@@ -25,3 +25,19 @@ def book_list(request):
     #return response
     response = JsonResponse(data, safe=False, json_dumps_params={'ensure_ascii': False})
     return response
+
+def book_detail(request, pk):
+    book = Book.objects.get(pk = pk)  #특정 Book object를 가져온다
+    data = {
+        "book" : {
+            "author": book.author.name,
+            "name": book.name,
+            "description": book.description,
+            "shipping_cost": book.shipping_cost,
+            "quantity": book.quantity
+        }
+    }
+    response = JsonResponse(data, safe=False, json_dumps_params={'ensure_ascii': False})
+    return response
+
+    ## 원래는 없는 경우에 대비해서 try / except Book.DoesnotExist  등 처리를 해줘야 함
